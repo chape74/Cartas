@@ -3,16 +3,15 @@ package es.ieslavereda.cartas;
 import java.util.Arrays;
 
 public class Baraja {
-    private String[] palo = {"oros","bastos","espadas","copas"};
-    private int numero;
-    private Carta[] carta;
+
+    private final Carta[] carta;
 
     public Baraja(){
         carta = new Carta[48];
         int j = 0;
-        for (String palo : this.palo){
-            for (int i = 1; i <= 12; i++) {
-                carta[j++] = new Carta(palo,i);
+        for (Palo palo : Palo.values()){
+            for (Letra numero : Letra.values()) {
+                carta[j++] = new Carta(palo,numero);
             }
         }
     }
@@ -20,7 +19,6 @@ public class Baraja {
     @Override
     public String toString() {
         return "Baraja{" +
-                "cartas=" + Arrays.toString(carta) +
-                '}';
+                "cartas=" +"\n"+ Arrays.toString(carta);
     }
 }
