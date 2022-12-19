@@ -2,24 +2,24 @@ package es.ieslavereda.cartas;
 
 public class Carta {
     private final Palo palo;
-    private final Letra letra;
+    private final Valor valor;
 
-    public Carta(Palo palo, Letra letra) {
+    public Carta(Palo palo, Valor valor) {
         this.palo = palo;
-        this.letra = letra;
+        this.valor = valor;
     }
 
     public Palo getPalo() {
         return palo;
     }
 
-    public Letra getLetra() {
-        return letra;
+    public Valor getLetra() {
+        return valor;
     }
 
     @Override
     public String toString() {
-        return "Carta{"+ palo +" "+ letra  +
+        return "Carta{"+ palo +" "+ valor +
                 '}' + "\n";
     }
 }
