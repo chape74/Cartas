@@ -13,13 +13,13 @@ public class Carta {
         return palo;
     }
 
-    public Valor getLetra() {
+    public Valor getValor() {
         return valor;
     }
 
     @Override
     public String toString() {
-        return "Carta{"+ palo +" "+ valor +
-                '}' + "\n";
+        return "|"+ palo + valor + "| ";
+
     }
 }

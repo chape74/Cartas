@@ -28,6 +28,9 @@ public enum Valor {
         return puntuacion;
     }
 
+    public String getCaracter() {
+        return caracter;
+    }
 
     @Override
     public String toString() {
